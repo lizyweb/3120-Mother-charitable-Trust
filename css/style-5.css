@@ -1,0 +1,41 @@
+:root {
+    --brand: #01b5fb;
+    --sub: #6ac754;
+    --body: #516171;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-item-top img {
+    transition: .5s;
+}
+
+.service-item-top:hover img {
+    transform: scale(1.1);
+}
+
+
+.uniform-size {
+    width: 100%;       /* Ensures the image fits its container */
+    height: 500px;     /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image scales proportionally and fills the container */
+}
+
+
+/*Mission*/
+.mission .mv{
+ 
+  background-color: var(--brand);
+  padding: 30px 30px;
+  margin-top: 1px;
+}
+
+.mission .mv1{
+  border-right: 5px solid white;
+}
+@media (max-width: 991px){
+  .mission .mv1{
+    border-right: 0px;
+    border-bottom: 5px solid white;
+  }
+}

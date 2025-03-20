@@ -1,0 +1,684 @@
+:root {
+    --brand: #01b5fb;
+    --sub: #6ac754;
+    --body: #516171;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+  /*** Navbar ***/
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-left: 15px;
+    padding: 25px 0;
+    color: var(--secondary);
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    font-size: 16px; /* You can adjust the size based on your preference */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.navbar .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--brand);
+    transition: width 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover::after,
+.navbar .navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--brand);
+    transform: translateY(-3px); /* Adds a slight upward movement on hover */
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 25px;
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+.navbar-brand h3:hover {
+    color: var(--sub);
+}
+
+.navbar-brand .logo {
+    width: 150px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-brand h3 {
+    font-size: 24px; /* Adjust the text size */
+    margin-left: 10px; /* Add spacing between the logo and text */
+    font-weight: 600; /* Make the text bold */
+    color: #01257D;
+}
+/* Mobile View Adjustments */
+@media only screen and (max-width: 768px) {
+    .navbar-brand .logo {
+        width: 60px; /* Smaller logo for mobile view */
+    }
+
+    .navbar-brand h3 {
+        font-size: 15px; /* Reduce text size on mobile */
+        margin-left: 5px; /* Adjust margin for better spacing */
+    }
+}
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    background: rgba(0, 0, 0, .65);
+    z-index: 1;
+}
+.carousel-item{
+    height: 650px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--dark);
+    border: 15px solid var(--dark);
+    border-radius: 50px;
+}
+
+.carousel-caption .breadcrumb-item+.breadcrumb-item::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+        border-width: 12px;
+    }
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #999999;
+}
+/*End*/
+.service::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 45px);
+    top: 135px;
+    left: 0;
+    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/image-4/slider-2.jpg) center center no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+ /*End*/
+
+ .intervention-area .header-text {
+    text-align: center;
+  }
+  
+  .intervention-area .header-text h1 {
+    margin-bottom: 20px;
+  }
+  
+  .single-intervention {
+    background-color: #01257D;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    height: 220px;
+    
+  }
+  
+  .single-intervention:hover {
+    box-shadow: 0px 20px 30px 0px rgba(231, 228, 39, 0.664);
+    cursor: pointer;
+  }
+  
+  .single-intervention:hover h4 {
+    color: #01257D;
+  }
+  
+  .single-intervention h4 {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .single-intervention h4 .lnr {
+    margin-right: 15px;
+  }
+  .single-intervention p {
+    color: #fff;
+  }
+
+  /*-------- start other-issue Area ------------*/
+
+.single-other-issue {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.single-other-issue .thumb {
+    overflow: hidden;
+    border-bottom: 3px solid #01257D;
+    position: relative;
+}
+
+.single-other-issue .thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(100%);
+}
+
+.single-other-issue h4 {
+    margin: 20px 0;
+    font-size: 1.25rem;
+    transition: color 0.4s ease;
+    font-weight: 600;
+}
+
+.single-other-issue:hover h4 {
+    color: #01257D;
+}
+
+.single-other-issue:hover .thumb img {
+    transform: scale(1.1) rotate(-5deg);
+    filter: grayscale(0%);
+}
+
+.single-other-issue:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    border-color: #01257D;
+}
+
+.single-other-issue p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 10px 15px;
+}
+
+/* Image class for height consistency */
+.img-activity {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Add unique hover effect */
+.single-other-issue .thumb:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.single-other-issue:hover .thumb:after {
+    opacity: 1;
+}
+.single-activity {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    height: 400px;
+}
+/*-------- end other-issue Area ------------*/
+  /*-------- start future-planned Area ------------*/
+.future-planned-area {
+    padding: 60px 0;
+}
+
+.single-future-planned {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.single-future-planned .icon {
+    font-size: 40px;
+    color: var(--brand);
+    margin-bottom: 15px;
+}
+
+.single-future-planned h4 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.single-future-planned:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.future-planned-area .title h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.future-planned-area .title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.future-planned-area .title h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/*-------- end future-planned Area ------------*/
+   
+/*-------- start Board of Trustees Area ------------*/
+.board-of-trustees {
+    padding: 60px 0;
+}
+
+.table-responsive {
+    overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+.trustees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trustees-table th,
+.trustees-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.trustees-table th {
+    background-color: var(--brand);
+    color: white;
+    font-size: 18px;
+}
+
+.trustees-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.trustees-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.board-of-trustees .title h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.board-of-trustees .title p {
+    font-size: 16px;
+    color: #666;
+}
+/*-------- end Board of Trustees Area ------------*/
+
+/*-------- start Bank Account Details Area ------------*/
+.bank-account-details {
+    padding: 40px 15px; /* Adequate padding */
+}
+
+.account-card {
+    background: #fff; /* White background for card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Inner padding */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.account-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.account-item {
+    display: flex; /* Flexbox for label and value */
+    justify-content: space-between; /* Space between label and value */
+    margin-bottom: 15px; /* Space between items */
+    padding: 5px 0; /* Reduced padding for items */
+    border-bottom: 1px solid #ddd; /* Divider line */
+}
+
+.account-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.account-label {
+    font-weight: bold; /* Bold for labels */
+    color: var(--brand); /* Blue color for labels */
+    font-size: 16px; /* Adjusted font size for mobile */
+}
+
+.account-value {
+    color: #333; /* Dark text for values */
+    font-size: 16px; /* Adjusted font size for mobile */
+}
+
+/* Title styles */
+.bank-account-details .title h1 {
+    font-size: 28px; /* Larger font for title */
+    margin-bottom: 10px; /* Space below title */
+    color: #333; /* Dark text for title */
+}
+
+.bank-account-details .title p {
+    font-size: 16px; /* Description text size */
+    color: #666; /* Grey text for description */
+    margin-bottom: 30px; /* Space below description */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bank-account-details {
+        padding: 20px 10px; /* Further reduce padding */
+    }
+
+    .account-item {
+        flex-direction: column; /* Stack label and value on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .account-card {
+        padding: 15px; /* Further adjust padding */
+    }
+}
+
+.qr-code {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr-code img {
+    border: 2px solid #ff6b6b; /* Optional: Add a border around the QR code */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/*-------- end Bank Account Details Area ------------*/
+
+  
+ /*-------- start Donation Request Area ------------*/
+.donation-request {
+    padding: 40px 20px; /* Adequate padding */
+}
+
+.request-card {
+    background: #ffffff; /* White background for card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 30px; /* Inner padding */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.request-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.request-header h1 {
+    font-size: 28px; /* Larger font for title */
+    color: var(--brand); /* Blue color for title */
+}
+
+.divider {
+    width: 50px; /* Divider width */
+    height: 3px; /* Divider height */
+    background: var(--brand); /* Divider color */
+    border: none; /* No border */
+    margin: 10px auto; /* Centered */
+}
+
+.request-content p {
+    font-size: 16px; /* Standard font size for content */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.bank-details {
+    background: #e9f5fb; /* Light blue background for bank details */
+    padding: 10px; /* Padding for bank details */
+    border-radius: 5px; /* Rounded corners */
+    margin: 15px 0; /* Margin around bank details */
+}
+
+.request-footer p {
+    font-size: 16px; /* Standard font size for footer */
+    color: #555; /* Slightly lighter text color */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .donation-request {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .request-card {
+        padding: 15px; /* Further adjust padding for mobile */
+    }
+
+    .request-header h1 {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .request-content p, .request-footer p {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
+/*-------- end Donation Request Area ------------*/
+  /*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    left: -45px;
+    margin-top: -1px;
+    background: var(--brand);
+  }
+  
+  .section-title::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    right: -45px;
+    margin-top: -1px;
+    background: var(--brand);
+  }
+  
+  .section-title.text-start::before,
+  .section-title.text-end::after {
+    display: none;
+  }
+  /*End*/
+  
+  /* Mobile View Adjustments */
+@media (max-width: 767px) {
+    .trustee-section {
+        padding: 20px 0;
+    }
+    .container {
+        padding: 20px;
+        margin: 0 10px;
+        box-shadow: none;
+    }
+    .section-header h2 {
+        font-size: 22px;
+    }
+    .section-header p {
+        font-size: 12px;
+    }
+    .trustee-info {
+        padding: 15px;
+    }
+    .trustee-info h3 {
+        font-size: 20px;
+    }
+    .trustee-info p {
+        font-size: 14px;
+    }
+    .trustee-message {
+        padding: 10px;
+    }
+    .trustee-message h4 {
+        font-size: 18px;
+    }
+    .trustee-message p {
+        font-size: 12px;
+    }
+}
+
+/*End*/
+
+  /*** Events ***/
+@media (min-width: 992px) {
+    .container.events {
+        max-width: 100% !important;
+    }
+
+    .events-text {
+        padding-right: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .events-text {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .events-text {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
